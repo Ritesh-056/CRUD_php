@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert into Database</title>
+</head>
+<body>
+    
+   <h2> Teacher Form </h2>
+
+    <form name="form" method ="post" action="insert.php"  onsubmit="return checkUserValidation()">
+       <table>
+           <tr>
+               <td> Id </td>
+               <td><input type="text" name="id"/></td>
+           </tr>
+
+           <tr> 
+               <td> Name</td>
+               <td> <input type="text" name="name"/></td>
+        </tr>
+
+        <tr>
+            <td>Address </td>
+            <td><input type="text" name="address"/></td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+            <td> <input type="submit" value="save"/></td>
+        </tr>
+       </table>
+    </form>
+
+
+<script type = "text/javascript">
+
+  function  checkUserValidation(){
+    
+    
+    var userId = document.form.id.value ;
+    var userName = document.form.name.value ;
+    var userAddress = document.form.address.value ;
+
+
+    if(userId == ""){
+        alert("Insert id");
+        document.form.id.focus();
+        return false;
+    }
+
+    if(isNaN(userId)){
+        alert("Id must be numeric");
+        document.form.id.focus();
+        return false;
+    }
+
+    if(userName ==""){
+        alert("Insert name");
+        document.form.name.focus();
+        return false;
+    }
+
+    if(userAddress ==""){
+        alert("Insert address");
+        document.form.address.focus();
+        return false;
+    }
+
+    return true;
+  }
+
+
+</script>
+</body>
+</html>
+
