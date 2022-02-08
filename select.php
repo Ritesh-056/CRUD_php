@@ -15,6 +15,7 @@
      //checking connection with the databse
      if(!$pdo){
           echo "Connection error!" ;
+          return;
      }
 
 

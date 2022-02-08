@@ -23,6 +23,7 @@
    //checking connection with the databse
    if(!$pdo){
         echo "Connection error!" ;
+        return ; 
    }
 
    //make a query for updating the data 

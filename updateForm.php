@@ -20,6 +20,7 @@
    //checking connection with the database
    if(!$pdo){
         echo "Connection error!" ;
+        return ; 
    }
 
 
